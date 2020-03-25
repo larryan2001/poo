@@ -1,28 +1,56 @@
 #ifndef FRACTIE_H_INCLUDED
 #define FRACTIE_H_INCLUDED
 
-class Fractie{
+class Fractie {
 private:
-    int numarator;
-    int numitor;
+	int numarator;
+	int numitor;
 
 public:
 
-    Fractie(int , int );
-    Fractie();
-    Fractie (Fractie& );
-    Fractie operator+(Fractie& );
-    Fractie operator-(Fractie& );
-    Fractie operator/(Fractie& );
-    Fractie operator*(Fractie& );
-    Fractie operator*(int& );
-    int getNumitor();
-    int getNumarator();
-    void setNumitor(int );
-    void setNumarator(int );
-    void afisare();
-    void simplificareFormaIreductibila();
-    void simplificare(int );
+	Fractie(int, int);
+
+	Fractie();
+
+	Fractie(Fractie&);
+
+
+	Fractie operator+(const Fractie&);
+
+
+
+	Fractie operator-(const Fractie&);
+
+
+	Fractie operator/(const Fractie&);
+
+
+	Fractie operator*(const Fractie&);
+
+
+	Fractie operator*(int);
+
+	friend Fractie operator*(int, Fractie&);
+
+	int getNumitor();
+
+
+	int getNumarator();
+
+
+	void setNumitor(int);
+
+
+	void setNumarator(int);
+
+
+
+	void afisare();
+
+	void simplificareFormaIreductibila();
+
+
+	void simplificare(int);
 
 
 };
